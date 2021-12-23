@@ -5,10 +5,7 @@ const Contact:NextPage = () => {
         <div>
             <h1>Contact</h1>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Pellentesque euismod, urna eu tincidunt consectetur,
-                nisi nisl aliquam nunc, eu aliquet nisl nunc eu nisl.
-                Nulla facilisi.
+                this is a contact page
             </p>
         </div>
     );
