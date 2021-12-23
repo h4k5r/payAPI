@@ -2,15 +2,15 @@ import type {NextPage} from 'next'
 import classes from '../styles/Home.module.css'
 import {NavButton} from "../Components/NavBar/NavBar";
 import Image from 'next/image';
-import hero from '../public/images/hero.png';
+import hero from '/public/images/hero.png';
 import React from "react";
-import microsoft from '../public/images/microsoft.svg';
-import google from '../public/images/google.svg';
-import android from '../public/images/android.svg';
-import feature from '../public/images/feature.png';
-import moneybag from '../public/images/moneyBag.svg';
-import graph from '../public/images/graph.svg';
-import creditCard from '../public/images/creditCard.svg';
+import microsoft from '/public/images/microsoft.svg';
+import google from '/public/images/google.svg';
+import android from '/public/images/android.svg';
+import feature from '/public/images/feature.png';
+import moneybag from '/public/images/moneyBag.svg';
+import graph from '/public/images/graph.svg';
+import creditCard from '/public/images/creditCard.svg';
 
 const Home: NextPage = () => {
     return (
