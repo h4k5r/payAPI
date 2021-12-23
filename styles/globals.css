@@ -14,3 +14,20 @@ a {
 * {
   box-sizing: border-box;
 }
+:root {
+
+
+  --dark-gray: #535353;
+  --light-gray:#878787;
+  --pink: #9a3366;
+  --shadow-color:#cbcbcb;
+
+  --button-font: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  --page-margin:10vw;
+  --nav-height: 72px;
+}
+.main {
+  display: block;
+}
+

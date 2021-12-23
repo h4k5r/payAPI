@@ -1,0 +1,55 @@
+.navBar {
+    padding: 1vh 0 ;
+    margin: 0 var(--page-margin);
+    display: flex;
+    height: var(--nav-height);
+    position: sticky;
+}
+.navLeftContainer {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+.logo {
+    text-align: center;
+    font-size: 1.2rem;
+}
+.logoSpan1 {
+    color: var(--dark-gray);
+    font-weight: bolder;
+}
+.logoSpan2 {
+    color: var(--light-gray);
+}
+.navLinksList {
+    all: unset;
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 50%;
+    margin-left: 10%;
+}
+.navLinksList li {
+    list-style: none;
+    margin: 0 10px;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--light-gray);
+    font-weight: bolder;
+}
+.navLinksList li > a {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.navButtonMain {
+    border: none;
+    border-radius: 100vw;
+    padding: 0.75rem 1.5rem;
+    color: white;
+    background-color: var(--pink);
+    font-family: var(--button-font);
+    font-weight: bolder;
+    letter-spacing: 0.05rem;
+    box-shadow: 0px 0px 1rem 1px var(--shadow-color);
+}

@@ -1,0 +1,16 @@
+
+.footer__Container {
+    margin-top: 5vh;
+    display: flex;
+    padding: 5vh var(--page-margin);
+    background-color: #020202;
+    justify-content: space-between;
+
+}
+.footer__SocialIcons {
+    display: flex;
+    max-width: 15%;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
