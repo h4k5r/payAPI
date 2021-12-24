@@ -6,6 +6,11 @@ import classes from "./NavBar.module.css";
 const NavBar: React.FC<{}> = () => {
     return (
         <>
+            <div className={classes.backgroundCircle__Container}>
+                <svg height="800" width="800" className={classes.backgroundCircle}>
+                    <circle cx="400" cy="400" r="400" fill="#cbcbcb "/>
+                </svg>
+            </div>
             <nav className={classes.navBar}>
                 <NavLeftContainer/>
                 <div>
@@ -36,7 +41,7 @@ export const NavButton: React.FC<{}> = () => {
     const router = useRouter();
 
     const onDemoClickHandler = () => {
-        router.push("/demo");
+        router.push("/contact");
     }
     return (
         <>

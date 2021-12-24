@@ -25,11 +25,6 @@ const Home: NextPage = () => {
 }
 const HeroSection: React.FC<{}> = () => {
     return <section className={classes.hero}>
-        <div className={classes.hero__backgroundCircle_Container}>
-            <svg height="800" width="800" className={classes.hero__backgroundCircle}>
-                <circle cx="400" cy="400" r="400" fill="#cbcbcb "/>
-            </svg>
-        </div>
         <div className={classes.hero__content}>
             <p>
                 Start Building<br/>
@@ -69,12 +64,15 @@ const ClientsSection: React.FC<{}> = () => {
             </p>
             <button className={classes.clients__button}>About Us</button>
         </div>
-        <div className={classes.clients__logo_container}>
-            <Image src={microsoft} className={classes.clients__logo_image} width={"200"} alt={"microsoft"}/>
-            <Image src={google} className={classes.clients__logo_image} width={"200"} alt={"google"}/>
-            <Image src={android} className={classes.clients__logo_image} width={"200"} alt={"android"}/>
-        </div>
+        <ClientLogo/>
     </section>
+}
+export const ClientLogo:React.FC<{}> = () => {
+    return        <div className={classes.clients__logo_container}>
+        <Image src={microsoft} className={classes.clients__logo_image} width={"200"} alt={"microsoft"}/>
+        <Image src={google} className={classes.clients__logo_image} width={"200"} alt={"google"}/>
+        <Image src={android} className={classes.clients__logo_image} width={"200"} alt={"android"}/>
+    </div>
 }
 
 const FeaturesSection: React.FC<{}> = () => {
@@ -172,7 +170,7 @@ const SubFeatures: React.FC<{}> = () => {
 export const FinalCTA: React.FC<{}> = () => {
     return (
         <section className={classes.finalCta}>
-            <p className={classes.finalCta__title}>Readu to start?</p>
+            <p className={classes.finalCta__title}>Ready to start?</p>
             <div>
                 <CTAInput/>
             </div>

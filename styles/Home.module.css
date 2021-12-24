@@ -14,18 +14,7 @@
     flex-direction: column;
 }
 
-.hero__backgroundCircle_Container {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -100;
-    overflow: hidden;
-}
 
-.hero__backgroundCircle {
-    margin-top: -10rem;
-    margin-right: -10rem;
-}
 
 .hero__imageContainer {
     flex-grow: 1;

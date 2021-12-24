@@ -1,0 +1,65 @@
+.pricing {
+    padding: 0 var(--page-margin);
+
+}
+.pricing__title {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+.planCards__container {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.planCard {
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 2rem var(--shadow-color);
+    padding: 2%;
+}
+.planeCard__title {
+    all: unset;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--pink);
+    margin-bottom: 1rem;
+}
+.planCard__description {
+    all: unset;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--light-gray);
+
+}
+.planCard__price {
+    all: unset;
+    font-weight: bold;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+.planCard__featureContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+.planCard__feature{
+    all: unset;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--pink);
+    margin-bottom: 1rem;
+}
+.planCard__feature > span{
+    color: black;
+}
+.planCard__notAvailable__feature{
+    composes: planCard__feature;
+    color: white;
+
+}
+.planCard__notAvailable__feature > span{
+    color: var(--light-gray);
+}
