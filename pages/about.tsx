@@ -4,7 +4,7 @@ import React from "react";
 import classes from "../styles/About.module.css";
 import statementDataInterface from "../data/statementData";
 import {statementData} from "../data/statementData";
-import image from "../images/annie-spratt-QckxruozjRg-unsplash.jpg";
+import image from "../Images/annie-spratt-QckxruozjRg-unsplash.jpg";
 import StatDataInterface from "../data/statData";
 import { StatsData} from "../data/statData";
 
