@@ -1,57 +1,153 @@
 .about {
-    padding: 0 calc(var(--page-margin) * 2);
     color: var(--dark-gray);
 }
+
 .about__header {
     font-weight: bolder;
-    font-size: 4rem;
-    padding-top: 1.5rem;
 }
+
 .statement__container {
-    display: flex;
     padding: 1.5rem 0;
+    display: flex;
 }
+
 .statement__title {
     all: unset;
-    font-size: 2rem;
     font-weight: bolder;
-    width: 30%;
 }
+
 .statement__description {
     all: unset;
+    width: 70%;
     font-size: 1.5rem;
     color: var(--light-gray);
-    width: 70%;
 }
+
 .banner {
     max-height: 50vh;
+    margin: 3rem 0;
     overflow: hidden;
     display: flex;
-    margin: 3rem 0;
 }
+
 .banner__image {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 .stats__container {
-    display: flex;
     padding: 1.5rem var(--page-margin);
+    display: flex;
     justify-content: space-between;
 }
+
 .stat {
+    padding: 1.5rem 0;
     display: flex;
     flex-direction: column;
-    padding: 1.5rem 0;
 }
+
 .stat__title {
     all: unset;
     font-size: 1.5rem;
     color: var(--light-gray);
 }
+
 .stat__value {
     all: unset;
     font-size: 4rem;
     font-weight: bolder;
     color: var(--pink);
+}
+
+@media (min-width: 360px) and (max-width: 991px) {
+    .about {
+        padding: 0 var(--page-margin);
+    }
+
+    .about__header {
+        font-size: 2rem;
+        padding-top: 0.75rem;
+    }
+
+    .statement__container {
+        flex-direction: column;
+    }
+
+    .statement__title {
+        font-size: 1.5rem;
+        width: 100%;
+    }
+
+    .statement__description {
+        margin-top: 0.5rem;
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .stats__container {
+        padding: 1.5rem var(--page-margin);
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .stat {
+        padding: 1rem 0;
+        display: flex;
+    }
+
+    .stat__title {
+        all: unset;
+        font-size: 1rem;
+    }
+
+    .stat__value {
+        font-size: 2rem;
+        font-weight: bolder;
+    }
+}
+
+@media (min-width: 992px) {
+    .about {
+        padding: 0 calc(var(--page-margin) * 2)
+    }
+
+    .about__header {
+        font-size: 4rem;
+        padding-top: 1.5rem;
+    }
+
+    .statement__container {
+        flex-direction: row;
+    }
+
+    .statement__title {
+        font-size: 2rem;
+        width: 30%;
+    }
+
+    .statement__description {
+        margin-top: unset;
+        width: 70%;
+        font-size: 1.5rem;
+    }
+
+    .stats__container {
+        padding: 1.5rem var(--page-margin);
+        justify-content: space-between;
+    }
+
+    .stat {
+        padding: 1.5rem 0;
+    }
+
+    .stat__title {
+        font-size: 1.5rem;
+    }
+
+    .stat__value {
+        font-size: 4rem;
+
+    }
 }

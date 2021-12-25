@@ -3,7 +3,7 @@ import classes from '../styles/Home.module.css'
 import {NavButton} from "../Components/NavBar/NavBar";
 import Image from 'next/image';
 import hero from '../Images/hero.png';
-import React from "react";
+import React, {useEffect} from "react";
 import microsoft from '../Images/microsoft.svg';
 import google from '../Images/google.svg';
 import android from '../Images/android.svg';
@@ -11,8 +11,14 @@ import feature from '../Images/feature.png';
 import moneybag from '../Images/moneyBag.svg';
 import graph from '../Images/graph.svg';
 import creditCard from '../Images/creditCard.svg';
+import {useDispatch} from "react-redux";
+import {UiActions} from "../store/ui-slice";
 
 const Home: NextPage = () => {
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(UiActions.closeMobileNav())
+    })
     return (
         <>
             <div className="main">
@@ -28,13 +34,15 @@ const HeroSection: React.FC<{}> = () => {
         <div className={classes.hero__content}>
             <p>
                 Start Building<br/>
-                with our APis for<br/>
+                with our APIs for<br/>
                 absolutely free.
             </p>
             <CTAInput/>
         </div>
-        <div className={classes.hero__imageContainer}>
-            <Image src={hero} alt={"app hero image"}/>
+        <div className={`${classes.hero__imageContainer} `}>
+            <div>
+                <Image src={hero} alt={"app hero image"}  className={classes.hero__image}  />
+            </div>
         </div>
     </section>
 }
@@ -67,8 +75,8 @@ const ClientsSection: React.FC<{}> = () => {
         <ClientLogo/>
     </section>
 }
-export const ClientLogo:React.FC<{}> = () => {
-    return        <div className={classes.clients__logo_container}>
+export const ClientLogo: React.FC<{}> = () => {
+    return <div className={classes.clients__logo_container}>
         <Image src={microsoft} className={classes.clients__logo_image} width={"200"} alt={"microsoft"}/>
         <Image src={google} className={classes.clients__logo_image} width={"200"} alt={"google"}/>
         <Image src={android} className={classes.clients__logo_image} width={"200"} alt={"android"}/>
@@ -88,14 +96,14 @@ const FeaturesSection: React.FC<{}> = () => {
                 <div className={classes.feature__imageTerminal_container}>
                     <div className={classes.feature__imageTerminal_window}>
                         <div className={classes.feature__imageTerminal_buttonContainer}>
-                            <div className={classes.feature__imageTerminal_buttonsClose}></div>
-                            <div className={classes.feature__imageTerminal_buttonsMaximize}></div>
-                            <div className={classes.feature__imageTerminal_buttonsMinimize}></div>
+                            <div className={classes.feature__imageTerminal_buttonsClose}>x</div>
+                            <div className={classes.feature__imageTerminal_buttonsMaximize}>x</div>
+                            <div className={classes.feature__imageTerminal_buttonsMinimize}>x</div>
                         </div>
                     </div>
                     <div className={classes.feature__imageTerminal_code}>
                         <br/>
-                        {"<script src=/static/js/2.409d9eca.chunk.js></script>"}
+                        {"`<script src=/static/js/2.409d9eca.chunk.js></script>`"}
                         <br/>
                         {"<script src=\/static/js/main.0c00d949.chunk.js\></script>"}
                     </div>

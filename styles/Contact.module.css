@@ -1,47 +1,129 @@
 .contact {
-    padding:  0 var(--page-margin);
+    padding: 0 var(--page-margin);
 }
-.contact > p {
-    all: unset;display: block;
-    font-size: 4rem;
-    padding: 2rem 0;
 
+.contact > p {
+    all: unset;
+    display: block;
 }
+
 .contact__container {
     display: flex;
 }
+
 .contact__form {
-    padding:5vh ;
-    width: 50%;
+    padding: 5vh;
     display: flex;
     flex-direction: column;
     align-content: space-between;
     justify-content: space-between;
     height: 50vh;
 }
+
 .contact__form > input {
-    all:unset;
+    all: unset;
     border-bottom: var(--light-gray) solid 1px;
     padding: 10px;
-    font-size: 1.5rem;
 
 }
+
 .contact__form > input ::placeholder {
     color: var(--light-gray);
 }
+
 .clients__container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 5%;
 
 }
+
 .clients__container > div {
     max-width: 100%;
     max-height: 50%;
 }
+
 .clients__container > p {
     all: unset;
-    font-size: 1.5rem;
     color: var(--light-gray);
+}
+
+@media (min-width: 360px) and (max-width: 991px) {
+    .contact {
+    }
+
+    .contact > p {
+        all: unset;
+        display: block;
+        font-size: 2rem;
+        padding: 1rem 0;
+
+    }
+
+    .contact__container {
+        flex-direction: column;
+    }
+
+    .contact__form {
+        padding: 5vh 0;
+        width: 100%;
+    }
+
+
+    .clients__container {
+
+    }
+
+    .clients__container > div {
+    }
+
+    .clients__container > p {
+        all: unset;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .contact {
+        padding: 0 var(--page-margin);
+    }
+
+    .contact > p {
+        display: block;
+        font-size: 4rem;
+        padding: 2rem 0;
+
+    }
+
+    .contact__container {
+        display: flex;
+    }
+
+    .contact__form {
+        padding: 5vh;
+        width: 50%;
+    }
+
+    .contact__form > input {
+        padding: 10px;
+        font-size: 1.5rem;
+
+    }
+
+    .contact__form > input ::placeholder {
+        color: var(--light-gray);
+    }
+
+    .clients__container {
+        flex-direction: column;
+        justify-content: center;
+        padding: 5%;
+    }
+
+    .clients__container > div {
+    }
+
+    .clients__container > p {
+        font-size: 1.5rem;
+    }
 }

@@ -1,17 +1,22 @@
 import {NextPage} from "next";
 import Image from "next/image";
-import React from "react";
+import React, {useEffect} from "react";
 import classes from "../styles/About.module.css";
 import statementDataInterface from "../data/statementData";
 import {statementData} from "../data/statementData";
 import image from "../Images/annie-spratt-QckxruozjRg-unsplash.jpg";
 import StatDataInterface from "../data/statData";
 import { StatsData} from "../data/statData";
+import {useDispatch} from "react-redux";
+import {UiActions} from "../store/ui-slice";
 
 const About:NextPage = () => {
     const firstHalf = statementData.slice(0, statementData.length / 2);
     const secondHalf = statementData.slice(statementData.length / 2, statementData.length);
-
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(UiActions.closeMobileNav())
+    })
     return (
         <>
             <section className={classes.about}>

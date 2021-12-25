@@ -3,8 +3,7 @@
 
 }
 .pricing__title {
-  font-size: 4rem;
-  margin-bottom: 2rem;
+
 }
 .planCards__container {
     padding-top: 1rem;
@@ -22,35 +21,32 @@
 .planeCard__title {
     all: unset;
     font-size: 2.5rem;
+    margin-bottom: 1rem;
     font-weight: bold;
     color: var(--pink);
-    margin-bottom: 1rem;
 }
 .planCard__description {
     all: unset;
-    font-weight: bold;
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    font-weight: bold;
+
     color: var(--light-gray);
 
 }
 .planCard__price {
     all: unset;
     font-weight: bold;
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
+
 }
 .planCard__featureContainer {
     display: flex;
     flex-direction: column;
-    margin-top: 1rem;
 }
 .planCard__feature{
     all: unset;
     font-weight: bold;
-    font-size: 1.5rem;
     color: var(--pink);
-    margin-bottom: 1rem;
 }
 .planCard__feature > span{
     color: black;
@@ -60,6 +56,71 @@
     color: white;
 
 }
-.planCard__notAvailable__feature > span{
+.planCard__notAvailable__feature > span {
     color: var(--light-gray);
+}
+
+@media (min-width: 360px)  and (max-width: 991px) {
+    .pricing__title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    .planCards__container{
+        flex-direction: column;
+    }
+    .planCard{
+        width: 100%;
+        margin-top: 2rem;
+        padding: 1rem;
+    }
+    .planCard__featureContainer {
+        margin-top: 0.5rem;
+    }
+    .planeCard__title {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .planCard__description {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    .planCard__price {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    .planCard__feature{
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (min-width: 992px)  {
+
+    .pricing__title {
+        font-size: 4rem;
+        margin-bottom: 2rem;
+    }
+    .planCards__container{
+        flex-direction: row;
+    }
+    .planCard{
+        width: 30%;
+    }
+    .planCard__featureContainer {
+        margin-top: 1rem;
+    }
+    .planeCard__title {
+        all: unset;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .planCard__price {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+    }
+    .planCard__feature{
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
 }

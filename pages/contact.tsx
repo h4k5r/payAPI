@@ -1,8 +1,15 @@
 import {NextPage} from "next";
 import {ClientLogo} from "./index";
 import classes from "../styles/Contact.module.css";
+import {useEffect} from "react";
+import {useDispatch} from "react-redux";
+import {UiActions} from "../store/ui-slice";
 
 const Contact:NextPage = () => {
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(UiActions.closeMobileNav())
+    })
     return (
         <section className={classes.contact}>
             <p>

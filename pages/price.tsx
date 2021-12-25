@@ -1,11 +1,16 @@
 import {NextPage} from "next";
-import React from "react";
+import React, {useEffect} from "react";
 import classes from "../styles/Price.module.css";
 import planCardInterface from "../data/planData";
 import {planCardsData} from "../data/planData";
+import {useDispatch} from "react-redux";
+import {UiActions} from "../store/ui-slice";
 
 const Price: NextPage = () => {
-    const freePlanFeatures: string[] = ["a", "b", "c"];
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(UiActions.closeMobileNav())
+    })
     return (
         <section className={classes.pricing}>
             <p className={classes.pricing__title}>Pricing</p>
